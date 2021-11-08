@@ -1,0 +1,13 @@
+[Unit]
+Description=NewTON miner
+After=network.target
+
+[Service]
+RestartSec=5
+Restart=always
+WorkingDirectory=/hive/miners/custom/downloads
+ExecStart=/hive/miners/custom/downloads/tonlib-opencl-cli -v 3 -C global.config.json -e "pminer start kf-kkdY_B7p-77TLn2hUhM6QidWrrsl8FYWCIvBMpZKprBtN EQCe72tW1EGwGhkUI3Q4hZskOQ99Fg8jQKBAhavRAy8fjR3R 3 32 0"
+
+[Install]
+WantedBy=multi-user.target
+Alias=miner3.service
