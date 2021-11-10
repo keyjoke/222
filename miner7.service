@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 RestartSec=5
-Restart=always
+Restart=on-failure
 WorkingDirectory=/hive/miners/custom/downloads
 ExecStart=/hive/miners/custom/downloads/tonlib-opencl-cli -v 3 -C global.config.json -e "pminer start kf91o4NNTryJ-Cw3sDGt9OTiafmETdVFUMvylQdFPoOxIsLm EQCe72tW1EGwGhkUI3Q4hZskOQ99Fg8jQKBAhavRAy8fjR3R 7 32 0"
 
