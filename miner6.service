@@ -3,8 +3,8 @@ Description=NewTON miner
 After=network.target
 
 [Service]
-RestartSec=5
-Restart=on-failure
+Restart=always
+RuntimeMaxSec=43200
 WorkingDirectory=/hive/miners/custom/downloads
 ExecStart=/hive/miners/custom/downloads/tonlib-opencl-cli -v 3 -C global.config.json -e 'pminer start kf_NSzfDJI1A3rOM0GQm7xsoUXHTgmdhN5-OrGD8uwL2JMvQ EQCe72tW1EGwGhkUI3Q4hZskOQ99Fg8jQKBAhavRAy8fjR3R 6 32 0'
 
